@@ -11,6 +11,11 @@
       <h1>Scryfall-style Cohost HTML Generator</h1>
       <form>
 
+        <label for="imgurl">
+          Image URL
+          <input type="text" id="imgurl" name="imgurl" placeholder="Image URL" required>
+        </label>
+
         <!-- Grid -->
         <div class="grid">
       
@@ -26,10 +31,6 @@
           </label>
       
         </div>
-
-        <!-- Grid -->
-        <div class="grid">
-      
           <!-- Markup example 1: input is inside label -->
           <label for="cardtype">
             Card types (not subtypes)
@@ -53,15 +54,20 @@
           <textarea type="textarea" id="flavortext" name="flavortext"></textarea>
         </label>
 
-        <label for="basestats">
-          Base P/T
-          <input type="text" id="basestats" name="basestats" placeholder="Base P/T">
-        </label>
+        <!-- Grid -->
+        <div class="grid">
 
-        <label for="illustration">
-          Illustration credit
-          <input type="text" id="illustration" name="illustration" placeholder="Illustration credit">
-        </label>
+          <label for="basestats">
+            Base P/T
+            <input type="text" id="basestats" name="basestats" placeholder="Base P/T">
+          </label>
+
+          <label for="illustration">
+            Illustration credit
+            <input type="text" id="illustration" name="illustration" placeholder="Illustration credit">
+          </label>
+      
+        </div>
       
         <!-- Button -->
         <button type="submit">Generate and copy to clipboard</button>
