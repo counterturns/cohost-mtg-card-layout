@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Scryfall-style Cohost HTML Generator</h1>
+      <form>
+
+        <!-- Grid -->
+        <div class="grid">
+      
+          <!-- Markup example 1: input is inside label -->
+          <label for="cardname">
+            Card name
+            <input type="text" id="cardname" name="cardname" placeholder="Card name" required>
+          </label>
+
+          <label for="manacost">
+            Mana cost
+            <input type="text" id="manacost" name="manacost" placeholder="Mana cost">
+          </label>
+      
+        </div>
+
+        <!-- Grid -->
+        <div class="grid">
+      
+          <!-- Markup example 1: input is inside label -->
+          <label for="cardtype">
+            Card types (not subtypes)
+            <input type="text" id="cardtype" name="cardtype" placeholder="Card types" required>
+          </label>
+
+          <label for="cardsubtype">
+            Card subtypes (if any)
+            <input type="text" id="cardsubtype" name="cardsubtype" placeholder="Card subtypes">
+          </label>
+      
+        </div>
+
+        <label for="rulestext">
+          Rules text
+          <textarea type="rulestext" id="rulestext" name="rulestext"></textarea>
+        </label>
+
+        <label for="flavortext">
+          Flavor text
+          <textarea type="textarea" id="flavortext" name="flavortext"></textarea>
+        </label>
+
+        <label for="basestats">
+          Base P/T
+          <input type="text" id="basestats" name="basestats" placeholder="Base P/T">
+        </label>
+
+        <label for="illustration">
+          Illustration credit
+          <input type="text" id="illustration" name="illustration" placeholder="Illustration credit">
+        </label>
+      
+        <!-- Button -->
+        <button type="submit">Generate and copy to clipboard</button>
+      </form>
+    </main>
+  </body>
+</html>
