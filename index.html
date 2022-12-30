@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="generate.js"></script>
     <title>Hello, world!</title>
   </head>
   <body>
@@ -14,7 +15,7 @@
       <form>
 
         <label for="imgurl">
-          Image URL
+          Image URL <sup>required</sup>
           <input type="text" id="imgurl" name="imgurl" placeholder="Image URL" required>
         </label>
 
@@ -23,12 +24,12 @@
       
           <!-- Markup example 1: input is inside label -->
           <label for="cardname">
-            Card name
+            Card name <sup>required</sup>
             <input type="text" id="cardname" name="cardname" placeholder="Card name" required>
           </label>
 
           <label for="manacost">
-            Mana cost
+            Mana cost (ex. 2GU or {3}{R/W})
             <input type="text" id="manacost" name="manacost" placeholder="Mana cost">
           </label>
       
@@ -38,7 +39,7 @@
         <div class="grid">
           <!-- Markup example 1: input is inside label -->
           <label for="cardtype">
-            Card types (not subtypes)
+            Card types (not subtypes) <sup>required</sup>
             <input type="text" id="cardtype" name="cardtype" placeholder="Card types" required>
           </label>
 
@@ -75,7 +76,7 @@
         </div>
       
         <!-- Button -->
-        <button type="submit">Generate and copy to clipboard</button>
+        <button type="button" onclick="generate()">Generate and copy to clipboard</button>
       </form>
     </main>
   </body>
